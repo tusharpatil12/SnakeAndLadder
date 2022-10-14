@@ -8,8 +8,12 @@ public class SnakeAndLadder {
 		 int pos = 0;
 		 int dice;
 		 int temp;
+		 int countDice = 0;
+		 int countPos = 0;
+		 
 		System.out.println("Welcome to Snake and ladder Program");
         System.out.println("Single player at start position "+ pos);
+        
      
        while (pos <= 100){
            dice = RollDice();
@@ -20,9 +24,13 @@ public class SnakeAndLadder {
     	   temp = pos - 100;
     	   pos = pos - temp;
     	   System.out.println("Win the game pos is :"+pos);
+    	   System.out.println("No of Count Dice : "+ countDice);
+           System.out.println("No of Count Pos : "+ countPos);
        }
        else
        System.out.println("Win the game pos is : "+ pos);
+       System.out.println("No of Count Dice : "+ countDice);
+       System.out.println("No of Count Pos : "+ countPos);
 
 	}
 
