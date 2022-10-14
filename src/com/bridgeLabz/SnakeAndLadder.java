@@ -7,6 +7,7 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		 int pos = 0;
 		 int dice;
+		 int temp;
 		System.out.println("Welcome to Snake and ladder Program");
         System.out.println("Single player at start position "+ pos);
      
@@ -14,6 +15,13 @@ public class SnakeAndLadder {
            dice = RollDice();
            pos = mapTo(dice, pos);
        }
+       
+       if(pos > 100) {
+    	   temp = pos - 100;
+    	   pos = pos - temp;
+    	   System.out.println("Win the game pos is :"+pos);
+       }
+       else
        System.out.println("Win the game pos is : "+ pos);
 
 	}
